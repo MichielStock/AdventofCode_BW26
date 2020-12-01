@@ -20,6 +20,16 @@ function product_pairs(numbers)
     end
 end
 
+function product_triples(numbers)
+    for (i, x) in enumerate(numbers)
+        for (j, y) in enumerate(numbers)
+            for (k, z) in enumerate(numbers)
+                (x + y + z == year) && (x != y != z) && return x * y * z
+            end
+        end
+    end
+end
+
 @test product_pairs(example) == 514579
 
 function parse_file(fn)
@@ -31,5 +41,10 @@ end
 
 numbers = parse_file("data/1_report_repair/input.txt")
 
-solution = product_pairs(numbers)
-println("the solution is: $solution. I copied it to the clipboard for you!")
+solution_pairs = product_pairs(numbers)
+println("the solution for the pairs is: $solution_pairs. I copied it to the clipboard for you!")
+clipboard(solution_pairs)
+
+solution_triples = product_triples(numbers)
+println("the solution for the triples is: $solution. I copied it to the clipboard for you!")
+clipboard(solution_triples)
