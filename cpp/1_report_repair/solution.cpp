@@ -42,23 +42,6 @@ int main(int argc, char** argv)
             }
         }
     }
-    /*
-    for (auto const& x: nums)
-    {
-        for (auto const& y: nums)
-        {
-            for (auto const& z: nums)
-            {
-                if (x+y==2020)
-                    s1 = x*y;
-                if (x+y+z==2020)
-                    s2 = x*y*z;
-                if (s1 != 0 && s2 != 0)
-                    goto endLoop;
-            }
-        }
-    }
-    */
     endLoop:
     std::cout << s1 << '\n';
     std::cout << s2 << '\n';
