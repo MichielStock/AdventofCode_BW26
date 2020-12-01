@@ -27,6 +27,22 @@ int main(int argc, char** argv)
         exit(1);
     }
     unsigned long s1 {0}, s2 {0};
+    for (unsigned int i=0; i<nums.size()-2; ++i)
+    {
+        for (unsigned int j=i+1; j<nums.size()-1; ++j)
+        {
+            for (unsigned int z=j+1; z<nums.size(); ++z)
+            {
+                if (nums[i]+nums[j]==2020)
+                    s1 = nums[i]*nums[j];
+                if (nums[i]+nums[j]+nums[z]==2020)
+                    s2 = nums[i]*nums[j]*nums[z];
+                if (s1 != 0 && s2 != 0)
+                    goto endLoop;
+            }
+        }
+    }
+    /*
     for (auto const& x: nums)
     {
         for (auto const& y: nums)
@@ -42,6 +58,7 @@ int main(int argc, char** argv)
             }
         }
     }
+    */
     endLoop:
     std::cout << s1 << '\n';
     std::cout << s2 << '\n';
