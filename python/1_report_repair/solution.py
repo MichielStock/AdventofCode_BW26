@@ -23,28 +23,9 @@ t1 = time.time()
 print("Executed in {0} s".format(t1-t0))
 print("")
 
-"""Solution 2: two separate iterators
+"""Solution 2: nested for-loops 
 """
-print("Solution 2: two separate iterators")
-t0 = time.time()
-num = list(map(int, open(sys.argv[1],'r')))
-s1, s2 = None, None
-for x,y in product(num, num):
-    if x+y == 2020:
-        s1 = x*y
-        break
-for x,(y,z) in product(num,product(num,num)):
-    if x+y+z == 2020:
-        s2 = x*y*z
-        break
-print("{0} {1}".format(s1,s2))
-t1 = time.time()
-print("Executed in {0} s".format(t1-t0))
-print("")
-
-"""Solution 3: nested for-loops 
-"""
-print("Solution 3: for-loops")
+print("Solution 2: nested for-loops")
 t0 = time.time()
 num = list(map(int, open(sys.argv[1],'r')))
 s1, s2 = None, None
