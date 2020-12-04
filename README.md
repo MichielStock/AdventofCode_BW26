@@ -1,2 +1,3 @@
 # AdventofCode2020
-BW26 participates in Advent of Code
+
+BW26 rises to Advent of Code challenge!

@@ -42,6 +42,7 @@ example = """
 
 @test simulate_path(example, 3) == 7
 
+
 product_example = simulate_path(example, 1) * 
                     simulate_path(example, 3) * 
                     simulate_path(example, 5) * 
