@@ -32,3 +32,6 @@ end
 number_correct_pwds = count(check_password, pwd_structs)
 
 number_correct_pwds2 = count(check_password2, pwd_structs)
+
+println("The first solution is: $number_correct_pwds")
+println("The second solution is: $number_correct_pwds2")
