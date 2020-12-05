@@ -2,7 +2,9 @@
 
 Ho! ho! ho! BW26 rises to Advent of Code challenge!
 
-Private leaderboard code: `1059646-48d5074b`
+[Private leaderboard ](https://adventofcode.com/2020/leaderboard/private/view/1059646)
+
+(join with code: `1059646-48d5074b`)
 
 ## Rules
 
