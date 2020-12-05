@@ -20,6 +20,7 @@ solved = [
     (2, "MS"),
     (3, "MS"),
     (4, "MS"),
+    (5, "MS"),
 ]
 
 # get all participants
