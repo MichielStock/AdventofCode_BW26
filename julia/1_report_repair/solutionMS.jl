@@ -46,5 +46,5 @@ println("the solution for the pairs is: $solution_pairs. I copied it to the clip
 clipboard(solution_pairs)
 
 solution_triples = product_triples(numbers)
-println("the solution for the triples is: $solution. I copied it to the clipboard for you!")
+println("the solution for the triples is: $solution_triples. I copied it to the clipboard for you!")
 clipboard(solution_triples)

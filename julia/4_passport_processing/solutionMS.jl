@@ -5,7 +5,7 @@ AoC: day 4
 Check whether passwords are valid.
 =#
 
-fn = "data/4_passport_processing/input2.txt"
+fn = "data/4_passport_processing/input.txt"
 
 function parse_input(data)
     # split in records
@@ -78,3 +78,6 @@ iyr:2010 hgt:158cm hcl:#b6652a ecl:blu byr:1944 eyr:2021 pid:093154719
 
 number_valid_passports = count(isvalidpassport, passports)
 number_valid_passports2 = count(isvalidpassport2, passports)
+
+println("The first solution is: $number_valid_passports")
+println("The second solution is: $number_valid_passports2")
