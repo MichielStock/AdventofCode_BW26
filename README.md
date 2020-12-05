@@ -16,6 +16,6 @@ Ho! ho! ho! BW26 rises to Advent of Code challenge!
 ## Participants
 
 
-| **Name** | **Github account** | **language(s)**
-| :-------| ----------------- | ------|
-| Michiel | michielstock | Julia |
+| **Name** | **Initials** |**Github account** | **language(s)**
+| --------|--|----------------- | ------|
+| Michiel | MS | michielstock | Julia |
