@@ -7,7 +7,7 @@ That excalated quickly! Nothing to declare.
 
 parse_input(s::String) = split(s, "\n\n") |> s-> [split(sᵢ, "\n") for sᵢ in s]
 
-fn = "data/06_day6_customCustoms.txt"
+fn = "data/6_custom_customs/input.txt"
 input = read(fn, String) |> parse_input
 
 uniqueList = [unique(reduce(*, group))  for group in input]
