@@ -23,3 +23,4 @@ Ho! ho! ho! BW26 rises to Advent of Code challenge!
 | **Name** | **Initials** |**Github account** | **language(s)**
 | --------|--|----------------- | ------|
 | Michiel | MS | michielstock | Julia |
+| Bram | BDJ | beramos | Julia |
