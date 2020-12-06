@@ -8,7 +8,7 @@ Ho! ho! ho! BW26 rises to Advent of Code challenge!
 
 ## Rules
 
-1. Don't use the master branch ☝️
+1. Don't push to the main branch directly ☝️
    - create a separate branch for each contribution
 2. Follow the organization of the folder 🗂
 3. Your solution file should be named `solution<initials>.<extension>` 📜
