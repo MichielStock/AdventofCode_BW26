@@ -1,6 +1,6 @@
 #=
 Author: Michiel Stock
-AoC: day 5
+AoC: day 6
 
 Find the number of questions that at least one person said "yes" to
 =#
