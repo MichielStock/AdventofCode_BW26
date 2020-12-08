@@ -24,3 +24,4 @@ Ho! ho! ho! BW26 rises to Advent of Code challenge!
 | --------|--|----------------- | ------|
 | Michiel | MS | michielstock | Julia |
 | Bram | BDJ | beramos | Julia |
+| Thomas | TM | tfmortie | C++ |
