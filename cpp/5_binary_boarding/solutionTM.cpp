@@ -4,7 +4,6 @@
 #include <string>
 #include <fstream>
 #include <iostream>
-#include <algorithm>
 
 const unsigned int NROW {128}, NCOL {8};
 
