@@ -19,7 +19,7 @@ acc +6
 
 parse_input(input) = split(rstrip(input), "\n") .|> (s->split(s, " ")) .|> (s -> (s[1], parse(Int, s[2])))
 
-function find_loop(instructions)
+function run_instructions(instructions)
     n = length(instructions)
     visited = zeros(Bool, n)
     pos = 1
@@ -65,8 +65,8 @@ end
 
 instructions = read("data/8_handheld_halting/input.txt", String) |> parse_input
 
-term, acc_end = find_loop(instructions)
+term, acc_end = run_instructions(instructions)
 
 new_instructions = modify_instructions(instructions)
 
-term, acc_new = find_loop(new_instructions)
+term, acc_new = run_instructions(new_instructions)

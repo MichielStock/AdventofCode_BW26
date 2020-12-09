@@ -25,6 +25,8 @@ solved = [
     (6, "BDJ"),
     (7, "MS"),
     (9, "BDJ"),
+    (8, "MS"),
+    (9, "MS"),
 ]
 
 # get all participants
