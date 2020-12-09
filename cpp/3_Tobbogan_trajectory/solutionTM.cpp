@@ -41,7 +41,7 @@ int main(int argc, char** argv)
         prod*=cnt;
     std::cout << cntr[1] << ' ' << prod << '\n';
     auto t2 = std::chrono::high_resolution_clock::now();
-    auto time = std::chrono::duration_cast <std::chrono::milliseconds>(t2-t1).count();
+    auto time = std::chrono::duration_cast <std::chrono::microseconds>(t2-t1).count();
     std::cout << "Executed in " << time << " ms\n"; 
     return 0;
 }
