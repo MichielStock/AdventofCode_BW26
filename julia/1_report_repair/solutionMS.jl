@@ -10,6 +10,8 @@ using Test
 
 const year = 2020
 
+
+
 example = [1721, 979, 366, 299, 675, 1456]
 
 function product_pairs(numbers)
@@ -30,7 +32,7 @@ function product_triples(numbers)
     end
 end
 
-@test product_pairs(example) == 514579
+#@test product_pairs(example) == 514579
 
 function parse_file(fn)
     open(fn, "r") do f
@@ -43,8 +45,8 @@ numbers = parse_file("data/1_report_repair/input.txt")
 
 solution_pairs = product_pairs(numbers)
 println("the solution for the pairs is: $solution_pairs. I copied it to the clipboard for you!")
-clipboard(solution_pairs)
+#clipboard(solution_pairs)
 
 solution_triples = product_triples(numbers)
 println("the solution for the triples is: $solution_triples. I copied it to the clipboard for you!")
-clipboard(solution_triples)
+#clipboard(solution_triples)
