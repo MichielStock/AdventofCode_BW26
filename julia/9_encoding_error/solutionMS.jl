@@ -5,6 +5,7 @@ AoC: day 9
 Check if a number is the
 =#
 
+
 parse_int(s) = parse(Int, s)
 parse_input(input) = split(rstrip(input), "\n") .|> parse_int
 
@@ -37,36 +38,12 @@ function find_contiguous_sum(numbers, total)
         end
     end
 end
-    
 
-input = """
-35
-20
-15
-25
-47
-40
-62
-55
-65
-95
-102
-117
-150
-182
-127
-219
-299
-277
-309
-576
-"""
-
-#numbers = parse_input(input)
 numbers = read("data/9_encoding_error/input.txt", String) |> parse_input
 
 num_no_match = check_list(numbers, 25)
 i, j = find_contiguous_sum(numbers, num_no_match)
-sum(numbers[i:j]) == num_no_match
+subset = numbers[i:j]
+sum(subset) == num_no_match
 
-solution = minimum(@view(numbers[i:j])) + maximum(@view(numbers[i:j]))
+solution = minimum(subset) + maximum(subset)
