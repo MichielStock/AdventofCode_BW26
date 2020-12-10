@@ -5,6 +5,7 @@ AoC: day 8
 Find at which point the code enters a loop
 =#
 
+
 example = """
 nop +0
 acc +1

@@ -80,4 +80,3 @@ end
 adapters = read("data/10_adapter_array/input.txt", String) |> parse_input
 solution1 = adapter_chain(adapters)
 n_arrangements = number_adapter_chains(adapters)
-

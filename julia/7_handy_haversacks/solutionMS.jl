@@ -28,6 +28,7 @@ dark blue bags contain 2 dark violet bags.
 dark violet bags contain no other bags.
 """
 =#
+
 input = read("data/7_handy_haversacks/input.txt", String)
 
 statements = split(rstrip(input), "\n")
@@ -55,13 +56,16 @@ function recursive_contents(contains)
     contents = Dict(col => Set(last.(cont)) for (col, cont) in contains)
     changed = true
     for i in 1:length(contains)  # I can find stopping rules if I want to
+        changed = false
         for (col, cont) in contents
             for c in cont
                 if !issubset(cont, contents[c])
                     union!(cont, contents[c])
+                    changed = true
                 end
             end
         end
+        !changed && break
     end
     return contents
 end
@@ -78,8 +82,6 @@ function bags_required(contains, color)
     end
     return n_bags
 end
-
-
 
 
 contents = recursive_contents(contains)
