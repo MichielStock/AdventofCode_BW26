@@ -29,4 +29,7 @@
 - day 10:
   - name: "adaptor array"
   - MS: 37.921 μs
+- day 11:
+  - name: "seating system"
+  - MS: 472.864 ms
 ...
