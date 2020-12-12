@@ -19,6 +19,9 @@ L.LLLLLL.L
 L.LLLLL.LL
 """
 
+const bases = [(1,1), (-1,1), (1,-1), (-1,-1),
+    (0,1), (0,-1), (1,0), (-1,0)]
+
 function parse_input(input)
     lines = split(rstrip(input), "\n")
     n = length(lines)
@@ -33,11 +36,9 @@ end
 
 function n_adj(seating, i, j)
     n, m = size(seating)
-    neighbors = [(1,1), (-1,1), (1,-1), (-1,-1),
-                  (0,1), (0,-1), (1,0), (-1,0)]
     n_neigh = 0
-    for (g, h) in neighbors
-        k, l = i+g, j+h
+    @inbounds for (g, h) in bases
+        k, l = i + g, j + h
         ((1 ≤ k ≤ n) && (1 ≤ l ≤ m)) || continue
         occ = seating[k,l]
         !ismissing(occ) && (n_neigh += occ)
@@ -66,10 +67,8 @@ end
 
 function n_occ_seen(seating, i, j)
     n, m = size(seating)
-    directions = [(1,1), (-1,1), (1,-1), (-1,-1),
-                  (0,1), (0,-1), (1,0), (-1,0)]
     n_occ = 0
-    @inbounds for (g, h) in directions
+    @inbounds for (g, h) in bases
         k, l = i, j
         while true
             k += g
