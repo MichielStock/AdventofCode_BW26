@@ -31,5 +31,8 @@
   - MS: 37.921 μs
 - day 11:
   - name: "seating system"
-  - MS: 472.864 ms
+  - MS: 171.043 ms
+- day 12:
+  - name: "rain risk"
+  - MS: 214.344 μs
 ...
