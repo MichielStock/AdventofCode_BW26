@@ -63,7 +63,7 @@ function rotate!(waypoint, boat, val)
     waypoint.y = round(d * sin(θ + dθ))
 end
 
-function movetowaypoint(boat, waypoint, val)
+function movetowaypoint!(boat, waypoint, val)
     boat.x += val * waypoint.x
     boat.y += val * waypoint.y
 end
@@ -76,12 +76,13 @@ function move!(boat, waypoint, instructions)
         instr == 'W' && west!(waypoint, val)
         instr == 'L' && rotate!(waypoint, boat, val)
         instr == 'R' && rotate!(waypoint, boat, -val)
-        instr == 'F' && movetowaypoint(boat, waypoint, val)
+        instr == 'F' && movetowaypoint!(boat, waypoint, val)
     end
 end
 
 input = read("data/12_rain_risk/input.txt", String)
 instructions = parse_input(input)
+
 boat = Boat()
 move!(boat, instructions)
 
