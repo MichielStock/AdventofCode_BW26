@@ -24,9 +24,10 @@ unsigned short getnocc2(std::vector<std::vector<short>>& cgrid, unsigned int i, 
 {
     unsigned short nocc {0};
     std::vector<bool> stoppedcntr (9,0);
-    stoppedcntr[4]=true;
+    unsigned short stopcntr {1};
     unsigned int step {1};
-    while (std::accumulate(stoppedcntr.begin(),stoppedcntr.end(),0)<9)
+    stoppedcntr[4]=true;
+    while (stopcntr<9)
     {
         for (short d=0;d<9;d++)
         {
@@ -40,10 +41,14 @@ unsigned short getnocc2(std::vector<std::vector<short>>& cgrid, unsigned int i, 
                     {
                         nocc += (cgrid[i+r][j+c]==2 ? 1 : 0);
                         stoppedcntr[d]=true;
+                        stopcntr++;
                     }
                 }
                 else
+                {
                     stoppedcntr[d]=true;
+                    stopcntr++;
+                }
             } 
         }
         step++;
