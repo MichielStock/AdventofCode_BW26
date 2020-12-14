@@ -35,4 +35,7 @@
 - day 12:
   - name: "rain risk"
   - MS: 214.344 μs
+- day 13:
+  - name: "shuttle search"
+  - MS: 41.282 μs
 ...
