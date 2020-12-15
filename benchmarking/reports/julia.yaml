@@ -41,6 +41,7 @@
 - day 14:
   - name: "docking data"
   - MS: 10.769 ms
-- day 15: "rambunctious recitation"
+- day 15: 
+  - name: "rambunctious recitation"
   - MS: 2.049 s
 ...
