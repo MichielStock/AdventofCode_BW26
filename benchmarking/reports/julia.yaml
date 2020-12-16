@@ -47,4 +47,5 @@
 - day 16:
   - name: "ticket translation"
   - BDJ: 125.359 ms
+  - MS: 18.726 ms
 ...
