@@ -44,4 +44,7 @@
 - day 15: 
   - name: "rambunctious recitation"
   - MS: 2.049 s
+- day 16:
+  - name: "ticket translation"
+  - BDJ: 125.359 ms
 ...
