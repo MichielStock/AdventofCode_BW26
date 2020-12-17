@@ -1,0 +1,54 @@
+---
+- day 1:
+  - name: "report repair"
+  - MS: 2.230 ms
+- day 2:
+  - name: "password philosophy"
+  - MS: 1.496 ms
+- day 3:
+  - name: "Tobbogan trajectory"
+  - MS: 420.921 μs
+- day 4:
+  - name: "password processing"
+  - MS: 1.516 ms
+- day 5:
+  - name: "binary boarding"
+  - MS: 1.074 ms
+- day 6:
+  - name: "custom customs"
+  - MS: 2.741 ms
+- day 7:
+  - name: "handy haversacks"
+  - MS: 14.099 s
+- day 8:
+  - name: "handheld halting"
+  - MS: 1.909 ms
+- day 9:
+  - name: "encoding error"
+  - MS: 303.512 μs
+- day 10:
+  - name: "adaptor array"
+  - MS: 37.921 μs
+- day 11:
+  - name: "seating system"
+  - MS: 171.043 ms
+- day 12:
+  - name: "rain risk"
+  - MS: 214.344 μs
+- day 13:
+  - name: "shuttle search"
+  - MS: 41.282 μs
+- day 14:
+  - name: "docking data"
+  - MS: 10.769 ms
+- day 15: 
+  - name: "rambunctious recitation"
+  - MS: 2.049 s
+- day 16:
+  - name: "ticket translation"
+  - BDJ: 125.359 ms
+  - MS: 18.726 ms
+- day 17:
+  - name: "Conway cubes"
+  - MS: 147.955 ms
+...
