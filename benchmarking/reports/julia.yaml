@@ -48,4 +48,7 @@
   - name: "ticket translation"
   - BDJ: 125.359 ms
   - MS: 18.726 ms
+- day 17:
+  - name: "Conway cubes"
+  - MS: 147.955 ms
 ...
