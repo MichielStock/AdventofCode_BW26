@@ -51,4 +51,7 @@
 - day 17:
   - name: "Conway cubes"
   - MS: 147.955 ms
+- day 17:
+  - name: "Operation order"
+  - BDJ: 895.727 ms
 ...
