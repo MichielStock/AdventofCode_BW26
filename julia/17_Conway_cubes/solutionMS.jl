@@ -68,9 +68,10 @@ function update(X, nsteps::Int=1)
     return X
 end
 
+N = 20
 
-X = parse_input_nd(input, (20, 20, 20))
+X = parse_input_nd(input, (N, N, N))
 sol1 = update(X, 6) |> sum
 
-X = parse_input_nd(input, (20, 20, 20, 20))
+X = parse_input_nd(input, (N, N, N, N))
 sol2 = update(X, 6) |> sum
