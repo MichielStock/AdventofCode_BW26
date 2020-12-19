@@ -55,4 +55,7 @@
   - name: "operation order"
   - MS: 10.238 ms
   - BDJ: 895.727 ms
+- day 19:
+  - name: "monster message"
+  - MS: 612.951 ms
 ...
