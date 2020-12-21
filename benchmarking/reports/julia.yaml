@@ -59,4 +59,9 @@
   - name: "monster message"
   - MS: 612.951 ms
   - BDJ: 146.957 ms
+- day 20:
+  - name: "jurassic jigsaw"
+- day 21:
+  - name: "allergen assessment"
+  - BDJ: 80.605 ms
 ...
