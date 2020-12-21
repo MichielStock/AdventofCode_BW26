@@ -58,4 +58,7 @@
 - day 19:
   - name: "monster message"
   - MS: 612.951 ms
+- day 20:
+  - name: "Jurassic jigsaw"
+  - MS: 60.043 ms
 ...
