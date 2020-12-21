@@ -61,4 +61,7 @@
 - day 20:
   - name: "Jurassic jigsaw"
   - MS: 60.043 ms
+- day 21:
+  - name: allergen assessment
+  - MS: 2.497 ms
 ...
