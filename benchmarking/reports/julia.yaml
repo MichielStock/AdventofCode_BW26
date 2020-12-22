@@ -64,4 +64,7 @@
 - day 21:
   - name: allergen assessment
   - MS: 2.497 ms
+- day 22:
+  - name: crab combat
+  - MS: 653.570 ms
 ...
