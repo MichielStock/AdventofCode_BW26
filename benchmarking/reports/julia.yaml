@@ -66,4 +66,7 @@
   - name: allergen assessment
   - MS: 2.497 ms  
   - BDJ: 80.605 ms
+- day 21:
+  - name: "crab combat"
+  - BDJ: 3.906 s
 ...
