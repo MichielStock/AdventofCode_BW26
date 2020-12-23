@@ -17,7 +17,7 @@ function playcombat(cards1, cards2)
     cards1 = push!(Deque{Int}(), cards1...)
     cards2 = push!(Deque{Int}(), cards2...)
     nrounds = 0
-    while length(cards1) > 0 && length(cards2) > 0
+    while !isempty(cards1) && !isempty(cards2)
         nrounds += 1
         c1 = popfirst!(cards1)
         c2 = popfirst!(cards2)
