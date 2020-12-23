@@ -70,4 +70,7 @@
   - name: crab combat
   - MS: 653.570 ms
   - BDJ: 3.906 s
+- day 23:
+  - name: crab cups
+  - MS: 11.025 s
 ...
