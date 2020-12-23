@@ -5,26 +5,7 @@ AoC: day 23
 One crab, ten cups!
 =#
 
-#=
-function playcups(cups; nrounds=100)
-    n = length(cups)
-    for round in 1:nrounds
-        current = first(cups)
-        next = (cups[2], cups[3], cups[4])
-        destination = current > 1 ? current - 1 : n
-        while destination ∈ next
-            destination -= 1
-            destination == 0 && (destination = n)
-        end
-        index = findfirst(isequal(destination), cups)
-        cups = [cups[5:index]..., next..., cups[(index+1):end]..., current]
-    end
-    # sort so 1 is first
-    index = findfirst(isequal(1), cups)
-    cups = [cups[index:end]..., cups[1:(index-1)]...]
-    return cups
-end
-=#
+
 @btime begin
 function playcups(cups; nrounds=100)
     n = length(cups)
