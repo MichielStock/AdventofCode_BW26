@@ -72,5 +72,8 @@
   - BDJ: 3.906 s
 - day 23:
   - name: crab cups
-  - MS: 11.025 s
+  - MS: 7.575 s
+- day 24:
+  - name: lobby layout
+  - MS: 23.148 ms
 ...
