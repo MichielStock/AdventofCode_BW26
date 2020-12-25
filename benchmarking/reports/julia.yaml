@@ -76,4 +76,7 @@
 - day 24:
   - name: lobby layout
   - MS: 23.148 ms
+- day 25:
+  - name: combo breaker
+  - MS: 9.344 ms
 ...
