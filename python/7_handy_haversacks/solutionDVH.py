@@ -1,3 +1,7 @@
+"""
+author: Daan Van Hauwermeiren
+AoC: day 7
+"""
 #%%
 import re
 import time

@@ -1,3 +1,7 @@
+#=
+author: Daan Van Hauwermeiren
+AoC: day 3
+=#
 
 using Pkg
 Pkg.activate(".")
@@ -18,7 +22,7 @@ Base.getindex(A::CircularArray, I) = getindex(A.data, circindex(I,length(A.data)
 #Base.setindex!(A::CircularArray, v, i::Int) = setindex!(A.data, v, circindex(i,length(A.data)))
 #Base.setindex!(A::CircularArray, v, I) = setindex!(A.data, v, circindex(I,length(A.data)))    
 
-"""
+#=
 # notes and stuff
 
 c = CircularArray(rand(10))
@@ -31,7 +35,7 @@ acircstring = CircularArray(astring)
 astring[10]
 # gives the correct answer 'd'
 acircstring[10]
-"""
+=#
 
 
 # init array of CircularArrays with len=number of lines in the file

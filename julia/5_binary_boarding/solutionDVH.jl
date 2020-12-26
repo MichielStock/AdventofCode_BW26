@@ -1,3 +1,8 @@
+#=
+author: Daan Van Hauwermeiren
+AoC: day 5
+=#
+
 using Pkg
 Pkg.activate(".")
 
@@ -12,10 +17,10 @@ mutable struct SeatInterval
     max::Int
 end
 
-"""
+#=
 function to split the range based on a character
 will take the first of the second half of the range
-"""
+=#
 function split_range(seatinterval::SeatInterval, how::Char)
     mean = (seatinterval.min + seatinterval.max)/2;
     # left and right seem logical characters to process

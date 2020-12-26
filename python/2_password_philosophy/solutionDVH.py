@@ -1,5 +1,6 @@
 """
 author: Daan Van Hauwermeiren
+AoC: day 2
 """
 import sys
 import time

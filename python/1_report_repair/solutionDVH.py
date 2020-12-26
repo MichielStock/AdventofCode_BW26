@@ -1,5 +1,6 @@
 """
 author: Daan Van Hauwermeiren
+AoC: day 1
 """
 import pandas as pd
 import itertools

@@ -1,3 +1,8 @@
+"""
+author: Daan Van Hauwermeiren
+AoC: day 4
+"""
+
 #%%
 fn = "./data/day4.txt"
 with open(fn, "r") as f:

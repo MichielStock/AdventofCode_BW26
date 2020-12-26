@@ -1,3 +1,7 @@
+#=
+author: Daan Van Hauwermeiren
+AoC: day 6
+=#
 fn = "./data/day6.txt"
 data = read(fn, String)
 
@@ -17,7 +21,7 @@ records
 # answer to the first question
 sum(length.(records))
 
-"""
+#=
 a less naive way to do this
 
 read data into a String
@@ -28,7 +32,7 @@ pipe each string to a set
 get the length of each set
 make the sum
 FUCK YEAH oneliner
-"""
+=#
 #
 read(fn, String) |> (x -> split(x, "\n\n")) .|> rstrip .|> (x -> replace(x, "\n"=>"")) .|> Set .|> length |> sum
 
@@ -50,7 +54,7 @@ records
 sum(length.(records))
 
 
-"""
+#=
 a less naive way to do this
 
 read data into a String
@@ -61,6 +65,6 @@ reduce the array of strings with intersect to get an array of unique chars
 compute length
 take the sum
 FUCK YEAH oneliner
-"""
+=#
 #
 read(fn, String) |> (x -> split(x, "\n\n")) .|> rstrip .|> (x -> split(x, "\n")) .|> (x -> reduce(∩, x)) .|> length |> sum
