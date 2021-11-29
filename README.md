@@ -2,6 +2,7 @@
 
 Ho! ho! ho! BW26 rises to Advent of Code challenge again!
 
+
 [Private leaderboard](https://adventofcode.com/2021/leaderboard/private)
 
 (join with code: `1059646-48d5074b`)
@@ -25,3 +26,6 @@ Ho! ho! ho! BW26 rises to Advent of Code challenge again!
 | --------|--|----------------- | ------|
 | Michiel | MS | michielstock | Julia |
 
+## Gitter chatroom
+
+[![Join the chat at https://gitter.im/STMOUGent/BW26_AoC](https://badges.gitter.im/STMOUGent/BW26_AoC.svg)](https://gitter.im/STMOUGent/BW26_AoC?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
