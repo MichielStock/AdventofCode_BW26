@@ -1,5 +1,7 @@
 # AdventofCode: Edition 2020
 
+[![Join the chat at https://gitter.im/STMOUGent/BW26_AoC](https://badges.gitter.im/STMOUGent/BW26_AoC.svg)](https://gitter.im/STMOUGent/BW26_AoC?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Ho! ho! ho! BW26 rises to Advent of Code challenge!
 
 [Private leaderboard ](https://adventofcode.com/2020/leaderboard/private/view/1059646?order=stars)
