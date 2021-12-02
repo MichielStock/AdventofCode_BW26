@@ -25,13 +25,17 @@ parse_input(s) = split(rstrip(s), "\n") .|> parse_int
 
 #numbers = parse_input(example_measurements)
 
+# --------- QUESTION 1 --------- #
+
 numbers = parse_input(read("data/1/input.txt", String))
 
 n_dept_incr(numbers) = count(i->numbers[i] > numbers[i-1], 2:length(numbers))
 
 solution1 = n_dept_incr(numbers)
 
+# --------- QUESTION 2 --------- #
+
 n_three_dept_incr(numbers) = count(i->numbers[i] + numbers[i+1] + numbers[i+2] <
                                     numbers[i+1] + numbers[i+2] + numbers[i+3], 1:length(numbers)-3)
 
-solutioon2 = n_three_dept_incr(numbers)
+solution2 = n_three_dept_incr(numbers)

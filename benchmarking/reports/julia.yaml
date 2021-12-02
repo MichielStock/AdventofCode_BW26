@@ -2,5 +2,8 @@
 - day 1:
   - name: "sonar sweep"
   - MS: 420.437 μs
+- day 2:
+  - name: "dive!"
+  - MS: 875.035 μs
 
 ...
