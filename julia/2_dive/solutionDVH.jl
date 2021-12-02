@@ -68,4 +68,4 @@ solution_1 = dasboot.horizontal * dasboot.vertical
 
 dasistaucheinboot = Submarine_v2()
 parse_data!(dasistaucheinboot, data)
-solution_1 = dasistaucheinboot.horizontal * dasistaucheinboot.vertical
+solution_2 = dasistaucheinboot.horizontal * dasistaucheinboot.vertical
