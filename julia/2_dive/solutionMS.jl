@@ -39,7 +39,7 @@ end
 
 #compute_location(instructions_toy)
 
-solution1 = compute_location(instructions) |> prod
+solution1 = ≈ |> prod
 
 
 # ----- QUESTION 2 ----- #

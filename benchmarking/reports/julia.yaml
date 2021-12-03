@@ -5,5 +5,7 @@
 - day 2:
   - name: "dive!"
   - MS: 875.035 μs
-
+- day 2:
+  - name: "binary diagnostic"
+  - MS: 370.873 μs
 ...
