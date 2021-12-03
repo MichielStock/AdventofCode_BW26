@@ -1,79 +1,11 @@
 ---
 - day 1:
-  - name: "report repair"
-  - MS: 2.230 ms
+  - name: "sonar sweep"
+  - MS: 420.437 μs
 - day 2:
-  - name: "password philosophy"
-  - MS: 1.496 ms
-- day 3:
-  - name: "Tobbogan trajectory"
-  - MS: 420.921 μs
-- day 4:
-  - name: "password processing"
-  - MS: 1.516 ms
-- day 5:
-  - name: "binary boarding"
-  - MS: 1.074 ms
-- day 6:
-  - name: "custom customs"
-  - MS: 2.741 ms
-- day 7:
-  - name: "handy haversacks"
-  - MS: 14.099 s
-- day 8:
-  - name: "handheld halting"
-  - MS: 1.909 ms
-- day 9:
-  - name: "encoding error"
-  - MS: 303.512 μs
-- day 10:
-  - name: "adaptor array"
-  - MS: 37.921 μs
-- day 11:
-  - name: "seating system"
-  - MS: 171.043 ms
-- day 12:
-  - name: "rain risk"
-  - MS: 214.344 μs
-- day 13:
-  - name: "shuttle search"
-  - MS: 41.282 μs
-- day 14:
-  - name: "docking data"
-  - MS: 10.769 ms
-- day 15: 
-  - name: "rambunctious recitation"
-  - MS: 2.049 s
-- day 16:
-  - name: "ticket translation"
-  - BDJ: 125.359 ms
-  - MS: 18.726 ms
-- day 17:
-  - name: "Conway cubes"
-  - MS: 147.955 ms
-- day 18:
-  - name: "operation order"
-  - MS: 10.238 ms
-  - BDJ: 895.727 ms
-- day 19:
-  - name: "monster message"
-  - MS: 612.951 ms
-  - BDJ: 146.957 ms
-- day 20:
-  - name: "Jurassic jigsaw"
-  - MS: 60.043 ms
-- day 21:
-  - name: allergen assessment
-  - MS: 2.497 ms
-  - BDJ: 80.605 ms
-- day 22:
-  - name: crab combat
-  - MS: 653.570 ms
-  - BDJ: 3.906 s
-- day 23:
-  - name: crab cups
-  - MS: 7.575 s
-- day 24:
-  - name: lobby layout
-  - MS: 23.148 ms
+  - name: "dive!"
+  - MS: 875.035 μs
+- day 2:
+  - name: "binary diagnostic"
+  - MS: 370.873 μs
 ...
