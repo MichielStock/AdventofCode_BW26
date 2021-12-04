@@ -47,7 +47,7 @@ function bit_criteria_v2(data, compare=≥)
     tmp = copy(processed)
     for i in 1:size(processed,2)
         col = tmp[:, i]
-        tmp = compare(sum(col), size(tmp,1)//2) ? tmp[col,:] : tmp[.!col ,:]
+        tmp = compare(sum(col), size(tmp,1) ÷ 2) ? tmp[col,:] : tmp[.!col ,:]
         if size(tmp, 1) == 1
             break
         end
