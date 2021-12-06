@@ -9,6 +9,9 @@
   - name: "binary diagnostic"
   - MS: 370.873 μs
 - day 4:
-  - name: giand squid
+  - name: "giand squid"
   - MS: 3.533 ms
+- day 6:
+  - name: "lanternfish"
+  - MS: 142.173 μs 
 ...
