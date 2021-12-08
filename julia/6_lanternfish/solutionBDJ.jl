@@ -31,13 +31,8 @@ update!(fishes; n=80) |> values |> sum
 
 # Full data
 fishes = read("./data/6_lanternfish/input.txt", String) |> parse_input |> intialise_fish_dict
-increments = depth_list |> count_increments
+update!(fishes; n=80) |> values |> sum
 
 # ------ Part 2 ------ #
-construct_window_sum(d) = [sum(d[i:i+2]) for i in 1:length(d)-2]
-
-# Test data
-windows_t = construct_window_sum(depth_list_t) |> count_increments
-
-# Full data
-windows = construct_window_sum(depth_list) |> count_increments
+fishes = read("./data/6_lanternfish/input.txt", String) |> parse_input |> intialise_fish_dict
+update!(fishes; n=256) |> values |> sum
