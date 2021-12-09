@@ -45,9 +45,6 @@ function basinify(H, lp_map; N_iter=20)
   return lp_map
 end
 
-
-# ------ Part 1 ------ #
-
 # Test data
 input_test = """
 2199943210
