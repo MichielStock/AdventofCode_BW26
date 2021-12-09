@@ -14,4 +14,13 @@
 - day 6:
   - name: "lanternfish"
   - MS: 142.173 μs 
+- day 7:
+  - name: "treachery of whales"
+  - MS: 3.493 ms 
+- day 8:
+  - name: "seven segments"
+  - MS: 1.055 ms
+- day 9:
+  - name: "smake basins"
+  - MS: 8.902 ms
 ...
