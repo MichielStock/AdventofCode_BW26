@@ -20,4 +20,7 @@
 - day 8:
   - name: "seven segments"
   - MS: 1.055 ms
+- day 9:
+  - name: "smake basins"
+  - MS: 8.902 ms
 ...
