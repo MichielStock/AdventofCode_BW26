@@ -7,7 +7,7 @@ test = [
 "up" 2
 ]
 
-gps_info = readdlm("input.txt")
+gps_info = readdlm("../../Data/2/input.txt")
 
 # question 1
 

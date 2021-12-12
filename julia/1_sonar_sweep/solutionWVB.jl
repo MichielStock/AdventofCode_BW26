@@ -23,7 +23,7 @@ function window_count_increases(input_num)
     return sum(increases .> 0)
 end
 
-day1_input = open(f->read(f, String), "input.txt")
+day1_input = open(f->read(f, String), "../../Data/1/input.txt")
 
 day1_num = split(day1_input,"\n")
 day1_num = day1_num[1:(length(day1_num)-1)]
