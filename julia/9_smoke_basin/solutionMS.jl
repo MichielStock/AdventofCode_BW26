@@ -28,6 +28,9 @@ function find_lowest_points(H)
     return L
 end
 
+L = find_lowest_points(H)
+solution1 = sum(H .* L) + sum(L)
+
 function find_basins(H, L)
     n, m = size(H)
     B = zero(H)
@@ -48,9 +51,6 @@ function find_basins(H, L)
     end
     return B
 end
-
-L = find_lowest_points(H)
-solution1 = sum(H .* L) + sum(L)
 
 B = find_basins(H, L)
 
