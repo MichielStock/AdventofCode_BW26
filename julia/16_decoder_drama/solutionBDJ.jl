@@ -9,46 +9,28 @@ struct LiteralValue <: BITS
   typeID::Int
   value::Int
   rest::BitArray
-  
+
   function LiteralValue(version,typeID,raw::BitArray)
     raw = raw[7:end] # remove version and typeID
-    N_trail, final_bit = find_end_literal(raw)
-    println("Final_bit = $final_bit")
-    literal = raw[1+N_trail:final_bit+N_trail]
-
     number = BitArray([])
-    for i in 1:(final_bit ÷ 5)
-      fiver = BitArray([popfirst!(raw) for i in 1:5])
-      number = vcat(number, fiver[2:end]) 
+
+    while true
+      if raw[1] == 1                                    # end of literal reached
+        fiver = BitArray([popfirst!(raw) for i in 1:5])
+        number = vcat(number, fiver[2:end]) 
+      else 
+        fiver = BitArray([popfirst!(raw) for i in 1:5])
+        number = vcat(number, fiver[2:end]) 
+        num_trail = rem(6+length(number)÷4*5, 4, RoundUp) # number of trailing zeros
+        _ = [popfirst!(raw) for i in 1:num_trail]         # remove these zeroes
+        break
+      end
     end
-    new(version, typeID, decode(number), raw[final_bit+N_trail+1:end])
+    return new(version, typeID, decode(number), deepcopy(raw))
   end
 end
 
-function find_end_literal(raw::BitArray)
-  for N_prefix in 0:3
-    raw_temp = raw[1+N_prefix:end]                      # shift reading window one to the right (add prefixed zero)
-    first_zero= findfirst(.!raw_temp[1:5:end])          # find first zero of first bit
-    # println(first_zero)
-    first_one = findfirst(raw_temp[first_zero+5:end])   # find first one after first bit   
-    
-    if first_one === nothing                            # End of stream
-      last_bit = first_zero + 4  
-    else
-      last_bit = (cld(first_zero-1 + first_one+5,5)-1)*5                 # last bit of literal
-    end 
 
-    # println(first_one)
-    # println(last_bit)
-
-    if mod(last_bit + N_prefix, 5) == 0                 # check if the found literal is groupable by five
-      return N_prefix, last_bit + N_prefix              # return last bit of literal
-    else
-      continue
-    end
-  end
-  return false
-end
 
 struct Operator <: BITS 
   version::Int
@@ -58,45 +40,40 @@ struct Operator <: BITS
   
   function Operator(version,typeID,raw::BitArray)
     I = raw[7]
-    println("Length index $I")
     raw = raw[8:end] # remove version and typeID
     subpackets = BITS[]
-
-    if !I 
+    if I == 0
       L = decode(raw[1:15])
       raw = raw[16:end]
       rawNew = copy(raw)
       change = 0
-      while  change < L 
+      while  change < L && !isempty(raw) && sum(raw) > 0
         packet, rawNew = parse_packet(raw) 
-        push!(subpackets, packet)
-        println(raw)
+        push!(subpackets, deepcopy(packet))
         change += (length(rawNew) - length(raw))
         raw = copy(rawNew)
       end
 
     else
       N = decode(raw[1:11])
-      println("Found $N subpackets")
       raw = raw[12:end]
       for i in 1:N 
-        packet, raw = parse_packet(raw) 
-        println(packet)
-        println(length(raw))
+        packet, rawNew = parse_packet(raw) 
         push!(subpackets, packet)
+        raw = copy(rawNew)
       end
     end
-
-    new(version, typeID, subpackets, raw)
+    new(deepcopy(version), deepcopy(typeID), deepcopy(subpackets), deepcopy(raw))
   end
 end
 
 function parse_packet(b::BitArray)
   (v, t) = version_type(b)
-  println("Type: $t")
+  println("Version $v, $t, $(length(b))")
+
   if t == 4
-    packet = LiteralValue(v, t, b)    
-  else 
+    packet = LiteralValue(v, t, b) 
+  else
     packet = Operator(v, t, b)
   end
     return packet, packet.rest
@@ -135,24 +112,31 @@ version_type(s::BitArray) = (decode(s[1:3]), decode(s[4:6]))
 
 
 example_1 = "D2FE28"
-example_2 = "EE00D40C823060"
+example_2 = "620080001611562C8802118E34"
 
 # Sandbox
 decode(example_1) |> parse_packet
-decode(example_2) |> parse_packet
-
-
-
-
-parse_packet("10110000001100100000100011000001100000" |> collect .== '1')
-
-£decode("D2FE28") |> x -> LiteralValue(4, 6, x)
-decode
-
-
+test, rest = decode(example_2) |> parse_packet
 
 
 decode([0,1,1,1] .== 1)
 
 BitArray[1, 0, 1, 0]
 
+function find_end_literal(raw::BitArray)
+  raw_temp = raw[1:end]                      # shift reading window one to the right (add prefixed zero)
+  first_zero= findfirst(.!raw_temp[1:5:end])          # find first zero of first bit
+  first_one = findfirst(raw_temp[first_zero+5:end])   # find first one after first bit   
+  
+  if first_one === nothing                            # End of stream
+    last_bit = first_zero + 4  
+  else
+    last_bit = (cld(first_zero-1 + first_one+5,5)-1)*5                 # last bit of literal
+  end 
+
+  if mod(last_bit, 5) == 0                 # check if the found literal is groupable by five
+    return last_bit                       # return last bit of literal
+  else
+    return false
+  end
+end
